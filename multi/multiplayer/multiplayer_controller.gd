@@ -67,6 +67,6 @@ func _apply_movement_from_input(delta):
 func _physics_process(delta: float) -> void:
 	if multiplayer.is_server():
 		_apply_movement_from_input(delta)
-
-	#if not multiplayer.is_server() || MultiplayerManager.host_mode_enabled:
-		#_apply_animations(delta)
+		
+	if not multiplayer.is_server() || MultiplayerManager.host_mode_enabled:
+		_apply_animations(delta)

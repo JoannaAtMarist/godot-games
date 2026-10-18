@@ -11,6 +11,12 @@ properties/0/replication_mode = 1
 properties/1/path = NodePath(".:position")
 properties/1/spawn = true
 properties/1/replication_mode = 1
+properties/2/path = NodePath(".:direction")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+properties/3/path = NodePath(".:is_on_floor")
+properties/3/spawn = true
+properties/3/replication_mode = 1
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_7c1do"]
 properties/0/path = NodePath("InputSynchronizer:input_direction")
@@ -96,7 +102,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_wi0c6")
 }],
 "loop": true,
-"name": &"default_2",
+"name": &"run",
 "speed": 5.0
 }]
 
@@ -117,6 +123,7 @@ script = ExtResource("2_va824")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1825935070]
 sprite_frames = SubResource("SpriteFrames_va824")
+animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1807791180]
 shape = SubResource("CapsuleShape2D_7c1do")
