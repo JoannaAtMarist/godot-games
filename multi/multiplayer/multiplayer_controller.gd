@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var speed = 400
 @export var rotation_speed = 1.5
-const JUMP_VELOCITY = -400.0
+#const JUMP_VELOCITY = -400.0
 
 var direction = 1
 var rotation_direction = 0
@@ -12,7 +12,17 @@ var rotation_direction = 0
 @export var player_id := 1:
 	set(id):
 		player_id = id
-		#%InputSynchronizer.set_multiplayer_authority(id)
+		# set authority to network client id
+		%InputSynchronizer.set_multiplayer_authority(id)
+
+
+func _ready():
+	# make sure we're on current client
+	if multiplayer.get_unique_id() == player_id:
+		$Camera2D.make_current()
+	else:
+		$Camera2D.enabled = false
+
 
 
 
@@ -38,12 +48,11 @@ func _apply_movement_from_input(delta):
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		#velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	direction = $InputSynchronizer.input_direction
-	# set velocity
 	velocity = direction * speed
 	
 	rotation += rotation_direction * rotation_speed * delta
@@ -56,4 +65,8 @@ func _apply_movement_from_input(delta):
 
 
 func _physics_process(delta: float) -> void:
-	pass
+	if multiplayer.is_server():
+		_apply_movement_from_input(delta)
+
+	#if not multiplayer.is_server() || MultiplayerManager.host_mode_enabled:
+		#_apply_animations(delta)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://43wqf8dv4mt6"]
 
+[ext_resource type="PackedScene" uid="uid://n2gdq0damdwi" path="res://TileMapLayer.tscn" id="1_e2o6t"]
 [ext_resource type="Script" uid="uid://b3cytlyas2up2" path="res://game_manager.gd" id="1_feb5d"]
-[ext_resource type="PackedScene" uid="uid://cxdacvmpuv7lr" path="res://World.tscn" id="2_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://cfpn2kq36nj5u" path="res://ui/MultiplayerHUD.tscn" id="2_feb5d"]
 [ext_resource type="PackedScene" uid="uid://6seegvgub3a3" path="res://player/Player.tscn" id="4_fc0e3"]
 
@@ -11,7 +11,7 @@
 unique_name_in_owner = true
 script = ExtResource("1_feb5d")
 
-[node name="World" parent="." unique_id=638115487 instance=ExtResource("2_fc0e3")]
+[node name="TileMapLayer" parent="." unique_id=1110576910 instance=ExtResource("1_e2o6t")]
 
 [node name="MultiplayerHUD" parent="." unique_id=1598806347 instance=ExtResource("2_feb5d")]
 unique_name_in_owner = true
