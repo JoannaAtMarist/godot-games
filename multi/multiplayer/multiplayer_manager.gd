@@ -1,13 +1,20 @@
 extends Node
 
 const SERVER_PORT = 8080
+# Currently, this has to be set to Host computer's IP address
+# 	and both computers must be on the same network
 const SERVER_IP = "127.0.0.1"
+
+
+
 
 # Scene that represents a multiplayer character
 var multiplayer_scene = preload("res://multiplayer/MultiplayerPlayer.tscn")
 
 var _players_spawn_node
 var host_mode_enabled = false
+
+
 
 
 func become_host():

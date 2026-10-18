@@ -29,7 +29,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="HostButton" parent="MultiplayerHUD/Panel/VBoxContainer" parent_id_path=PackedInt32Array(1598806347, 622569889) index="0" unique_id=964303880]
-text = "Host Gamep"
+text = "Host Game"
 
 [node name="P2Button" parent="MultiplayerHUD/Panel/VBoxContainer" parent_id_path=PackedInt32Array(1598806347, 622569889) index="1" unique_id=1407747736]
 text = "Join as Player 2"
@@ -45,5 +45,6 @@ spawn_limit = 2
 
 [connection signal="pressed" from="MultiplayerHUD/Panel/VBoxContainer/HostButton" to="GameManager" method="become_host"]
 [connection signal="pressed" from="MultiplayerHUD/Panel/VBoxContainer/P2Button" to="GameManager" method="join_as_player_2"]
+[connection signal="text_submitted" from="MultiplayerHUD/Panel/VBoxContainer/LineEdit" to="GameManager" method="_on_line_edit_text_submitted"]
 
 [editable path="MultiplayerHUD"]
