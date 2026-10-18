@@ -18,6 +18,10 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 MultiplayerManager="*uid://dm7otwavt8so4"
 
+[display]
+
+window/size/always_on_top=true
+
 [input]
 
 move_up={
