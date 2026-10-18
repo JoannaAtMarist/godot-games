@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://ulcyxx0gk30c" path="res://multiplayer/multiplayer_controller.gd" id="1_enfm7"]
 [ext_resource type="Texture2D" uid="uid://bopmnohkaa1pi" path="res://assets/RunCatb.png" id="2_0silc"]
+[ext_resource type="Script" uid="uid://b4q67yfcpg0qt" path="res://multiplayer/multiplayer_input.gd" id="2_va824"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_7c1do"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kne1u"]
 atlas = ExtResource("2_0silc")
@@ -92,6 +95,10 @@ height = 28.0
 
 [node name="MultiplayerPlayer" type="CharacterBody2D" unique_id=68831210]
 script = ExtResource("1_enfm7")
+
+[node name="InputSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=1449802631]
+replication_config = SubResource("SceneReplicationConfig_7c1do")
+script = ExtResource("2_va824")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1825935070]
 sprite_frames = SubResource("SpriteFrames_va824")
