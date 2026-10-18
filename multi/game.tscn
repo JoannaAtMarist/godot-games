@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://43wqf8dv4mt6"]
+
+[ext_resource type="Script" uid="uid://b3cytlyas2up2" path="res://game_manager.gd" id="1_feb5d"]
+[ext_resource type="PackedScene" uid="uid://cxdacvmpuv7lr" path="res://World.tscn" id="2_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://cfpn2kq36nj5u" path="res://ui/MultiplayerHUD.tscn" id="2_feb5d"]
+
+[node name="Game" type="Node" unique_id=732894761]
+
+[node name="GameManager" type="Node" parent="." unique_id=2094220717]
+unique_name_in_owner = true
+script = ExtResource("1_feb5d")
+
+[node name="World" parent="." unique_id=638115487 instance=ExtResource("2_fc0e3")]
+
+[node name="MultiplayerHUD" parent="." unique_id=1598806347 instance=ExtResource("2_feb5d")]
+unique_name_in_owner = true
+offset_left = -110.0
+offset_bottom = 35.0
+
+[node name="Panel" parent="MultiplayerHUD" index="0" unique_id=1200502858]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HostButton" parent="MultiplayerHUD/Panel/VBoxContainer" parent_id_path=PackedInt32Array(1598806347, 622569889) index="0" unique_id=964303880]
+text = "Host Gamep"
+
+[node name="P2Button" parent="MultiplayerHUD/Panel/VBoxContainer" parent_id_path=PackedInt32Array(1598806347, 622569889) index="1" unique_id=1407747736]
+text = "Join as Player 2"
+
+[connection signal="pressed" from="MultiplayerHUD/Panel/VBoxContainer/HostButton" to="GameManager" method="become_host"]
+[connection signal="pressed" from="MultiplayerHUD/Panel/VBoxContainer/P2Button" to="GameManager" method="join_as_player_2"]
+
+[editable path="MultiplayerHUD"]

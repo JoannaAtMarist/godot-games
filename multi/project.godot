@@ -11,9 +11,12 @@ config_version=5
 [application]
 
 config/name="Multi"
-run/main_scene="uid://cxdacvmpuv7lr"
+run/main_scene="uid://43wqf8dv4mt6"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+
+[autoload]
+
+MultiplayerManager="*uid://dm7otwavt8so4"
 
 [input]
 
