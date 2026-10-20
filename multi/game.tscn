@@ -4,12 +4,22 @@
 [ext_resource type="Script" uid="uid://b3cytlyas2up2" path="res://game_manager.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://cfpn2kq36nj5u" path="res://ui/MultiplayerHUD.tscn" id="2_feb5d"]
 [ext_resource type="PackedScene" uid="uid://6seegvgub3a3" path="res://player/Player.tscn" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://cixixf5mxahik" path="res://Brain.tscn" id="5_7jktm"]
 
 [node name="Game" type="Node" unique_id=732894761]
 
 [node name="GameManager" type="Node" parent="." unique_id=2094220717]
 unique_name_in_owner = true
 script = ExtResource("1_feb5d")
+
+[node name="ScoreLabel" type="Label" parent="GameManager" unique_id=1939041658]
+offset_left = 382.0
+offset_top = -314.0
+offset_right = 568.0
+offset_bottom = -288.0
+text = "You've collected X brains."
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="TileMapLayer" parent="." unique_id=1110576910 instance=ExtResource("1_e2o6t")]
 
@@ -42,6 +52,17 @@ spawn_limit = 2
 [node name="Players" type="Node2D" parent="." unique_id=1607267618]
 
 [node name="Player" parent="." unique_id=1852761571 instance=ExtResource("4_fc0e3")]
+
+[node name="Brains" type="Node" parent="." unique_id=1667357850]
+
+[node name="Brain" parent="Brains" unique_id=534826900 instance=ExtResource("5_7jktm")]
+position = Vector2(-367, 124)
+
+[node name="Brain2" parent="Brains" unique_id=933103270 instance=ExtResource("5_7jktm")]
+position = Vector2(-287, -158)
+
+[node name="Brain3" parent="Brains" unique_id=538091323 instance=ExtResource("5_7jktm")]
+position = Vector2(216, 132)
 
 [connection signal="pressed" from="MultiplayerHUD/Panel/VBoxContainer/HostButton" to="GameManager" method="become_host"]
 [connection signal="pressed" from="MultiplayerHUD/Panel/VBoxContainer/P2Button" to="GameManager" method="join_as_player_2"]

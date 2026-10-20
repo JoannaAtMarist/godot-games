@@ -167,6 +167,7 @@ radius = 11.0
 height = 28.0
 
 [node name="MultiplayerPlayer" type="CharacterBody2D" unique_id=68831210]
+collision_layer = 2
 script = ExtResource("1_enfm7")
 
 [node name="PlayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=1587000309]
