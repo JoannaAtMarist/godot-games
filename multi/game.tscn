@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b3cytlyas2up2" path="res://game_manager.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://cfpn2kq36nj5u" path="res://ui/MultiplayerHUD.tscn" id="2_feb5d"]
+[ext_resource type="PackedScene" uid="uid://yt2t0g25hfh0" path="res://multiplayer/Hud.tscn" id="2_ryrav"]
 [ext_resource type="PackedScene" uid="uid://cxdacvmpuv7lr" path="res://World.tscn" id="3_7jktm"]
 [ext_resource type="PackedScene" uid="uid://6seegvgub3a3" path="res://player/Player.tscn" id="4_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://cixixf5mxahik" path="res://Brain.tscn" id="5_7jktm"]
@@ -12,14 +13,7 @@
 unique_name_in_owner = true
 script = ExtResource("1_feb5d")
 
-[node name="ScoreLabel" type="Label" parent="GameManager" unique_id=1939041658]
-offset_left = 382.0
-offset_top = -314.0
-offset_right = 568.0
-offset_bottom = -288.0
-text = "You've collected X brains."
-horizontal_alignment = 1
-autowrap_mode = 2
+[node name="Hud" parent="." unique_id=1356855451 instance=ExtResource("2_ryrav")]
 
 [node name="World" parent="." unique_id=638115487 instance=ExtResource("3_7jktm")]
 

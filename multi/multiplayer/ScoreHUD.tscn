@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://boey5waqc80qb"]
+
+[ext_resource type="Script" uid="uid://cw1pul1uwpo3l" path="res://multiplayer/score_hud.gd" id="1_wc6um"]
+
+[node name="ScoreHud" type="Control" unique_id=435483549]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wc6um")
+
+[node name="Label" type="Label" parent="." unique_id=266883412]
+layout_mode = 0
+offset_right = 220.0
+offset_bottom = 28.0
+text = "Score: 0"

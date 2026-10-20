@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://yt2t0g25hfh0"]
+
+[ext_resource type="PackedScene" uid="uid://boey5waqc80qb" path="res://multiplayer/ScoreHUD.tscn" id="1_ohlpm"]
+
+[node name="Hud" type="CanvasLayer" unique_id=1356855451]
+
+[node name="ScoreHud" parent="." unique_id=435483549 instance=ExtResource("1_ohlpm")]
+
+[editable path="ScoreHud"]

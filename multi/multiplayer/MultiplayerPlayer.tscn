@@ -166,7 +166,7 @@ animations = [{
 radius = 11.0
 height = 28.0
 
-[node name="MultiplayerPlayer" type="CharacterBody2D" unique_id=68831210]
+[node name="MultiplayerPlayer" type="CharacterBody2D" unique_id=68831210 groups=["players"]]
 collision_layer = 2
 script = ExtResource("1_enfm7")
 
