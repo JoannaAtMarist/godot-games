@@ -6,7 +6,12 @@ extends CharacterBody2D
 
 var direction = 1
 var rotation_direction = 0
+
 @onready var _animated_sprite = $AnimatedSprite2D
+#@onready var _cat_sprite = $AnimatedSpriteCat
+#@onready var _dog_sprite = $AnimatedSpriteDog
+
+
 
 # multiplayer player id, defaults at 1
 @export var player_id := 1:
@@ -14,6 +19,15 @@ var rotation_direction = 0
 		player_id = id
 		# set authority to network client id
 		%InputSynchronizer.set_multiplayer_authority(id)
+
+@export var player_type := 1:
+	set(type):
+		player_type = type
+
+
+
+
+
 
 
 func _ready():
@@ -28,18 +42,32 @@ func _ready():
 
 
 func _apply_animations(delta):
-	if Input.is_action_pressed("move_left"):
-		_animated_sprite.flip_h = true
-		_animated_sprite.play("default")
-	elif Input.is_action_pressed("move_right"):
-		_animated_sprite.flip_h = false
-		_animated_sprite.play("default")
-	elif Input.is_action_pressed("move_up"):
-		_animated_sprite.play("default")
-	elif Input.is_action_pressed("move_down"):
-		_animated_sprite.play("default")
+	if player_id == 1:
+		if Input.is_action_pressed("move_left"):
+			_animated_sprite.flip_h = true
+			_animated_sprite.play("dog_run")
+		elif Input.is_action_pressed("move_right"):
+			_animated_sprite.flip_h = false
+			_animated_sprite.play("dog_run")
+		elif Input.is_action_pressed("move_up"):
+			_animated_sprite.play("dog_run")
+		elif Input.is_action_pressed("move_down"):
+			_animated_sprite.play("dog_run")
+		else:
+			_animated_sprite.stop()
 	else:
-		_animated_sprite.stop()
+		if Input.is_action_pressed("move_left"):
+			_animated_sprite.flip_h = true
+			_animated_sprite.play("cat_run")
+		elif Input.is_action_pressed("move_right"):
+			_animated_sprite.flip_h = false
+			_animated_sprite.play("cat_run")
+		elif Input.is_action_pressed("move_up"):
+			_animated_sprite.play("cat_run")
+		elif Input.is_action_pressed("move_down"):
+			_animated_sprite.play("cat_run")
+		else:
+			_animated_sprite.stop()
 
 
 func _apply_movement_from_input(delta):

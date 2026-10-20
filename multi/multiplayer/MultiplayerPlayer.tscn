@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://ulcyxx0gk30c" path="res://multiplayer/multiplayer_controller.gd" id="1_enfm7"]
 [ext_resource type="Texture2D" uid="uid://bopmnohkaa1pi" path="res://assets/RunCatb.png" id="2_0silc"]
 [ext_resource type="Script" uid="uid://b4q67yfcpg0qt" path="res://multiplayer/multiplayer_input.gd" id="2_va824"]
+[ext_resource type="Texture2D" uid="uid://i8umh0nh7h2p" path="res://assets/ZombieCatsSprites.png" id="4_tx330"]
+[ext_resource type="Texture2D" uid="uid://c45hvgl132hbr" path="res://assets/zombiedogs.png" id="5_cfh7c"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_va824"]
 properties/0/path = NodePath(".:player_id")
@@ -22,6 +24,22 @@ properties/3/replication_mode = 1
 properties/0/path = NodePath("InputSynchronizer:input_direction")
 properties/0/spawn = true
 properties/0/replication_mode = 1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx330"]
+atlas = ExtResource("4_tx330")
+region = Rect2(0, 321, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfh7c"]
+atlas = ExtResource("4_tx330")
+region = Rect2(32, 321, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0h86"]
+atlas = ExtResource("4_tx330")
+region = Rect2(64, 321, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xxob"]
+atlas = ExtResource("4_tx330")
+region = Rect2(96, 321, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kne1u"]
 atlas = ExtResource("2_0silc")
@@ -51,8 +69,49 @@ region = Rect2(160, 0, 32, 32)
 atlas = ExtResource("2_0silc")
 region = Rect2(192, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pb0u"]
+atlas = ExtResource("5_cfh7c")
+region = Rect2(0, 130, 64, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t548b"]
+atlas = ExtResource("5_cfh7c")
+region = Rect2(64, 130, 64, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_st7ex"]
+atlas = ExtResource("5_cfh7c")
+region = Rect2(128, 130, 64, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7nq5"]
+atlas = ExtResource("5_cfh7c")
+region = Rect2(192, 130, 64, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uikq4"]
+atlas = ExtResource("5_cfh7c")
+region = Rect2(256, 130, 64, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orupo"]
+atlas = ExtResource("5_cfh7c")
+region = Rect2(320, 130, 64, 63)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_va824"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx330")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfh7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0h86")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xxob")
+}],
+"loop": true,
+"name": &"cat_run",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kne1u")
@@ -81,28 +140,25 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kne1u")
+"texture": SubResource("AtlasTexture_1pb0u")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e80uo")
+"texture": SubResource("AtlasTexture_t548b")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cxr5p")
+"texture": SubResource("AtlasTexture_st7ex")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tdg3f")
+"texture": SubResource("AtlasTexture_x7nq5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dtqjt")
+"texture": SubResource("AtlasTexture_uikq4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5ncpa")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wi0c6")
+"texture": SubResource("AtlasTexture_orupo")
 }],
 "loop": true,
-"name": &"run",
+"name": &"dog_run",
 "speed": 5.0
 }]
 
@@ -121,9 +177,9 @@ unique_name_in_owner = true
 replication_config = SubResource("SceneReplicationConfig_7c1do")
 script = ExtResource("2_va824")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1825935070]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1401614818]
 sprite_frames = SubResource("SpriteFrames_va824")
-animation = &"run"
+animation = &"dog_run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1807791180]
 shape = SubResource("CapsuleShape2D_7c1do")
