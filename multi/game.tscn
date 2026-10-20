@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://43wqf8dv4mt6"]
 
-[ext_resource type="PackedScene" uid="uid://n2gdq0damdwi" path="res://TileMapLayer.tscn" id="1_e2o6t"]
 [ext_resource type="Script" uid="uid://b3cytlyas2up2" path="res://game_manager.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://cfpn2kq36nj5u" path="res://ui/MultiplayerHUD.tscn" id="2_feb5d"]
+[ext_resource type="PackedScene" uid="uid://cxdacvmpuv7lr" path="res://World.tscn" id="3_7jktm"]
 [ext_resource type="PackedScene" uid="uid://6seegvgub3a3" path="res://player/Player.tscn" id="4_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://cixixf5mxahik" path="res://Brain.tscn" id="5_7jktm"]
 
@@ -21,7 +21,7 @@ text = "You've collected X brains."
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="TileMapLayer" parent="." unique_id=1110576910 instance=ExtResource("1_e2o6t")]
+[node name="World" parent="." unique_id=638115487 instance=ExtResource("3_7jktm")]
 
 [node name="MultiplayerHUD" parent="." unique_id=1598806347 instance=ExtResource("2_feb5d")]
 unique_name_in_owner = true
@@ -52,17 +52,99 @@ spawn_limit = 2
 [node name="Players" type="Node2D" parent="." unique_id=1607267618]
 
 [node name="Player" parent="." unique_id=1852761571 instance=ExtResource("4_fc0e3")]
+position = Vector2(-30, 123)
 
 [node name="Brains" type="Node" parent="." unique_id=1667357850]
 
 [node name="Brain" parent="Brains" unique_id=534826900 instance=ExtResource("5_7jktm")]
-position = Vector2(-367, 124)
+position = Vector2(-243, 205)
 
 [node name="Brain2" parent="Brains" unique_id=933103270 instance=ExtResource("5_7jktm")]
-position = Vector2(-287, -158)
+position = Vector2(-315, 203)
 
 [node name="Brain3" parent="Brains" unique_id=538091323 instance=ExtResource("5_7jktm")]
-position = Vector2(216, 132)
+position = Vector2(-474, 195)
+
+[node name="Brain4" parent="Brains" unique_id=71734544 instance=ExtResource("5_7jktm")]
+position = Vector2(-585, 232)
+
+[node name="Brain5" parent="Brains" unique_id=725902185 instance=ExtResource("5_7jktm")]
+position = Vector2(-729, 230)
+
+[node name="Brain6" parent="Brains" unique_id=209418036 instance=ExtResource("5_7jktm")]
+position = Vector2(-812, 234)
+
+[node name="Brain7" parent="Brains" unique_id=1856227908 instance=ExtResource("5_7jktm")]
+position = Vector2(86, 328)
+
+[node name="Brain8" parent="Brains" unique_id=843215984 instance=ExtResource("5_7jktm")]
+position = Vector2(209, 336)
+
+[node name="Brain9" parent="Brains" unique_id=505825595 instance=ExtResource("5_7jktm")]
+position = Vector2(84, 422)
+
+[node name="Brain10" parent="Brains" unique_id=2080196878 instance=ExtResource("5_7jktm")]
+position = Vector2(209, 424)
+
+[node name="Brain11" parent="Brains" unique_id=11440978 instance=ExtResource("5_7jktm")]
+position = Vector2(836, 170)
+
+[node name="Brain12" parent="Brains" unique_id=1759950694 instance=ExtResource("5_7jktm")]
+position = Vector2(924, 166)
+
+[node name="Brain13" parent="Brains" unique_id=1258887161 instance=ExtResource("5_7jktm")]
+position = Vector2(825, 308)
+
+[node name="Brain14" parent="Brains" unique_id=1208859580 instance=ExtResource("5_7jktm")]
+position = Vector2(957, 432)
+
+[node name="Brain15" parent="Brains" unique_id=1409366792 instance=ExtResource("5_7jktm")]
+position = Vector2(203, -206)
+
+[node name="Brain16" parent="Brains" unique_id=131519046 instance=ExtResource("5_7jktm")]
+position = Vector2(291, -204)
+
+[node name="Brain17" parent="Brains" unique_id=151768175 instance=ExtResource("5_7jktm")]
+position = Vector2(374, -200)
+
+[node name="Brain18" parent="Brains" unique_id=1797792233 instance=ExtResource("5_7jktm")]
+position = Vector2(533, -231)
+
+[node name="Brain19" parent="Brains" unique_id=983203616 instance=ExtResource("5_7jktm")]
+position = Vector2(758, -227)
+
+[node name="Brain20" parent="Brains" unique_id=1629650724 instance=ExtResource("5_7jktm")]
+position = Vector2(867, -227)
+
+[node name="Brain21" parent="Brains" unique_id=1967759264 instance=ExtResource("5_7jktm")]
+position = Vector2(-118, -393)
+
+[node name="Brain22" parent="Brains" unique_id=1219424202 instance=ExtResource("5_7jktm")]
+position = Vector2(-190, -411)
+
+[node name="Brain23" parent="Brains" unique_id=1252929805 instance=ExtResource("5_7jktm")]
+position = Vector2(-346, -410)
+
+[node name="Brain24" parent="Brains" unique_id=1176135472 instance=ExtResource("5_7jktm")]
+position = Vector2(-194, -551)
+
+[node name="Brain25" parent="Brains" unique_id=568880988 instance=ExtResource("5_7jktm")]
+position = Vector2(-123, -540)
+
+[node name="Brain26" parent="Brains" unique_id=396484285 instance=ExtResource("5_7jktm")]
+position = Vector2(-276, -548)
+
+[node name="Brain27" parent="Brains" unique_id=1724337700 instance=ExtResource("5_7jktm")]
+position = Vector2(-754, -438)
+
+[node name="Brain28" parent="Brains" unique_id=641121957 instance=ExtResource("5_7jktm")]
+position = Vector2(-622, -272)
+
+[node name="Brain29" parent="Brains" unique_id=608405116 instance=ExtResource("5_7jktm")]
+position = Vector2(243, 164)
+
+[node name="Brain30" parent="Brains" unique_id=654083783 instance=ExtResource("5_7jktm")]
+position = Vector2(561, 388)
 
 [connection signal="pressed" from="MultiplayerHUD/Panel/VBoxContainer/HostButton" to="GameManager" method="become_host"]
 [connection signal="pressed" from="MultiplayerHUD/Panel/VBoxContainer/P2Button" to="GameManager" method="join_as_player_2"]

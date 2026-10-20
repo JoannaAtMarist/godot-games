@@ -8,8 +8,7 @@ var direction = 1
 var rotation_direction = 0
 
 @onready var _animated_sprite = $AnimatedSprite2D
-#@onready var _cat_sprite = $AnimatedSpriteCat
-#@onready var _dog_sprite = $AnimatedSpriteDog
+
 
 
 
@@ -20,9 +19,6 @@ var rotation_direction = 0
 		# set authority to network client id
 		%InputSynchronizer.set_multiplayer_authority(id)
 
-@export var player_type := 1:
-	set(type):
-		player_type = type
 
 
 
