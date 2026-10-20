@@ -46,6 +46,7 @@ spawn_limit = 2
 [node name="Players" type="Node2D" parent="." unique_id=1607267618]
 
 [node name="Player" parent="." unique_id=1852761571 instance=ExtResource("4_fc0e3")]
+visible = false
 position = Vector2(-30, 123)
 
 [node name="Brains" type="Node" parent="." unique_id=1667357850]

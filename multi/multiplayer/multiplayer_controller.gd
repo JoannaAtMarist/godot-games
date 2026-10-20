@@ -53,10 +53,10 @@ func _apply_animations(delta):
 			_animated_sprite.stop()
 	else:
 		if Input.is_action_pressed("move_left"):
-			_animated_sprite.flip_h = true
+			_animated_sprite.flip_h = false
 			_animated_sprite.play("cat_run")
 		elif Input.is_action_pressed("move_right"):
-			_animated_sprite.flip_h = false
+			_animated_sprite.flip_h = true
 			_animated_sprite.play("cat_run")
 		elif Input.is_action_pressed("move_up"):
 			_animated_sprite.play("cat_run")

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://p76f58bh3v6c"]
 
 [ext_resource type="Script" uid="uid://ulcyxx0gk30c" path="res://multiplayer/multiplayer_controller.gd" id="1_enfm7"]
-[ext_resource type="Texture2D" uid="uid://bopmnohkaa1pi" path="res://assets/RunCatb.png" id="2_0silc"]
 [ext_resource type="Script" uid="uid://b4q67yfcpg0qt" path="res://multiplayer/multiplayer_input.gd" id="2_va824"]
 [ext_resource type="Texture2D" uid="uid://i8umh0nh7h2p" path="res://assets/ZombieCatsSprites.png" id="4_tx330"]
 [ext_resource type="Texture2D" uid="uid://c45hvgl132hbr" path="res://assets/zombiedogs.png" id="5_cfh7c"]
@@ -40,34 +39,6 @@ region = Rect2(64, 321, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_5xxob"]
 atlas = ExtResource("4_tx330")
 region = Rect2(96, 321, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kne1u"]
-atlas = ExtResource("2_0silc")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e80uo"]
-atlas = ExtResource("2_0silc")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cxr5p"]
-atlas = ExtResource("2_0silc")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tdg3f"]
-atlas = ExtResource("2_0silc")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dtqjt"]
-atlas = ExtResource("2_0silc")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5ncpa"]
-atlas = ExtResource("2_0silc")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wi0c6"]
-atlas = ExtResource("2_0silc")
-region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1pb0u"]
 atlas = ExtResource("5_cfh7c")
@@ -112,28 +83,7 @@ animations = [{
 "name": &"cat_run",
 "speed": 5.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kne1u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e80uo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cxr5p")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tdg3f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dtqjt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5ncpa")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wi0c6")
-}],
+"frames": [],
 "loop": true,
 "name": &"default",
 "speed": 5.0
@@ -180,7 +130,6 @@ script = ExtResource("2_va824")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1401614818]
 sprite_frames = SubResource("SpriteFrames_va824")
-animation = &"dog_run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1807791180]
 shape = SubResource("CapsuleShape2D_7c1do")
