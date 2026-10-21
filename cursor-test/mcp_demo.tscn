@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bjskrlv2vde1h"]
+
+[node name="McpDemo" type="Node2D" unique_id=1840292247]
+
+[node name="Label" type="Label" parent="." unique_id=2091225225]
+offset_left = 200.0
+offset_top = 150.0
+offset_right = 200.0
+offset_bottom = 150.0
+text = "Hello from MCP!"

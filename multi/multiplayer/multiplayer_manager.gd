@@ -3,7 +3,7 @@ extends Node
 const SERVER_PORT = 8080
 # Currently, this has to be set to Host computer's IP address
 # 	and both computers must be on the same network
-const SERVER_IP = "127.0.0.1"
+const SERVER_IP = "148.100.133.155"
 
 
 # Scene that represents a multiplayer character

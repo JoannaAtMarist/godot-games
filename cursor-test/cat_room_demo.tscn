@@ -1,0 +1,221 @@
+[gd_scene format=3 uid="uid://bes6gv652m76e"]
+
+[ext_resource type="Texture2D" uid="uid://cdsr6iysn3vdn" path="res://assets/Rooms/Room1.png" id="1_xui5r"]
+[ext_resource type="Texture2D" uid="uid://3gejtlu5a5sn" path="res://assets/Catroompaid.png" id="2_wv6fm"]
+[ext_resource type="Script" uid="uid://cr12ky5s0g1cc" path="res://cat.gd" id="3_wv6fm"]
+[ext_resource type="SpriteFrames" path="res://cat_walk.tres" id="4_rt7hs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xui5r"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(19, 1, 61, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wv6fm"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(864, 3, 64, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0m24"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(452, 200, 25, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uilc0"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(488, 320, 17, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dk1q"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(674, 306, 93, 139)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rt7hs"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(559, 225, 111, 158)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2cfr"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(582, 16, 85, 175)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pebsd"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(329, 326, 110, 82)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67dkw"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(138, 685, 45, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6bwj"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(655, 676, 33, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggt4g"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(679, 484, 55, 92)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk41s"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(132, 226, 23, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l23cb"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(519, 40, 22, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jr0h5"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(674, 610, 61, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3du5w"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(528, 554, 33, 43)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y755x"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(332, 566, 43, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xumgl"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(461, 438, 43, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj7xw"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(454, 623, 52, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2et0"]
+atlas = ExtResource("2_wv6fm")
+region = Rect2(203, 879, 43, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rt7hs"]
+size = Vector2(20, 14)
+
+[node name="CatRoom" type="Node2D" unique_id=419358576]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1670197843]
+texture_filter = 1
+texture = ExtResource("1_xui5r")
+centered = false
+
+[node name="LeftWindow" type="Sprite2D" parent="." unique_id=404053349]
+texture_filter = 1
+position = Vector2(30, 190)
+texture = SubResource("AtlasTexture_xui5r")
+centered = false
+
+[node name="BlindWindow" type="Sprite2D" parent="." unique_id=1570552840]
+texture_filter = 1
+position = Vector2(165, 115)
+texture = SubResource("AtlasTexture_wv6fm")
+centered = false
+
+[node name="CatPoster" type="Sprite2D" parent="." unique_id=385963380]
+texture_filter = 1
+position = Vector2(258, 120)
+texture = SubResource("AtlasTexture_g0m24")
+centered = false
+
+[node name="HeartFrame" type="Sprite2D" parent="." unique_id=624700651]
+texture_filter = 1
+position = Vector2(227, 106)
+texture = SubResource("AtlasTexture_uilc0")
+centered = false
+
+[node name="CurtainWindow" type="Sprite2D" parent="." unique_id=1507592157]
+texture_filter = 1
+position = Vector2(300, 105)
+texture = SubResource("AtlasTexture_1dk1q")
+centered = false
+
+[node name="CatTreeStairs" type="Sprite2D" parent="." unique_id=1757950522]
+texture_filter = 1
+position = Vector2(97, 158)
+texture = SubResource("AtlasTexture_rt7hs")
+centered = false
+
+[node name="CatTree3Tier" type="Sprite2D" parent="." unique_id=1343997497]
+texture_filter = 1
+position = Vector2(402, 178)
+texture = SubResource("AtlasTexture_x2cfr")
+centered = false
+
+[node name="TealBed" type="Sprite2D" parent="." unique_id=884508926]
+texture_filter = 1
+position = Vector2(265, 244)
+texture = SubResource("AtlasTexture_pebsd")
+centered = false
+
+[node name="BigPlant" type="Sprite2D" parent="." unique_id=407958674]
+texture_filter = 1
+position = Vector2(198, 160)
+texture = SubResource("AtlasTexture_67dkw")
+centered = false
+
+[node name="CentrePerch" type="Sprite2D" parent="." unique_id=206009616]
+texture_filter = 1
+position = Vector2(232, 155)
+texture = SubResource("AtlasTexture_q6bwj")
+centered = false
+
+[node name="RoundScratcher" type="Sprite2D" parent="." unique_id=704691597]
+texture_filter = 1
+position = Vector2(40, 262)
+texture = SubResource("AtlasTexture_ggt4g")
+centered = false
+
+[node name="SmallPlant" type="Sprite2D" parent="." unique_id=1466322206]
+texture_filter = 1
+position = Vector2(102, 293)
+texture = SubResource("AtlasTexture_sk41s")
+centered = false
+
+[node name="BallToy" type="Sprite2D" parent="." unique_id=1165382449]
+texture_filter = 1
+position = Vector2(262, 232)
+texture = SubResource("AtlasTexture_l23cb")
+centered = false
+
+[node name="Table" type="Sprite2D" parent="." unique_id=999701329]
+texture_filter = 1
+position = Vector2(122, 340)
+texture = SubResource("AtlasTexture_jr0h5")
+centered = false
+
+[node name="CatFoodBag" type="Sprite2D" parent="." unique_id=1516424513]
+texture_filter = 1
+position = Vector2(132, 322)
+texture = SubResource("AtlasTexture_3du5w")
+centered = false
+
+[node name="FoodBowl" type="Sprite2D" parent="." unique_id=1325069028]
+texture_filter = 1
+position = Vector2(218, 390)
+texture = SubResource("AtlasTexture_y755x")
+centered = false
+
+[node name="WaterBowl" type="Sprite2D" parent="." unique_id=763185479]
+texture_filter = 1
+position = Vector2(272, 385)
+texture = SubResource("AtlasTexture_xumgl")
+centered = false
+
+[node name="MouseToy" type="Sprite2D" parent="." unique_id=2108122118]
+texture_filter = 1
+position = Vector2(332, 362)
+texture = SubResource("AtlasTexture_rj7xw")
+centered = false
+
+[node name="FishToy" type="Sprite2D" parent="." unique_id=1231303119]
+texture_filter = 1
+position = Vector2(418, 338)
+texture = SubResource("AtlasTexture_d2et0")
+centered = false
+
+[node name="Cat" type="CharacterBody2D" parent="." unique_id=1119023772]
+z_index = 10
+position = Vector2(195, 368)
+script = ExtResource("3_wv6fm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Cat" unique_id=566616138]
+texture_filter = 1
+sprite_frames = ExtResource("4_rt7hs")
+animation = &"walk"
+autoplay = "walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cat" unique_id=104567213]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_rt7hs")

@@ -1,0 +1,15 @@
+
+{
+    "mcpServers": {
+      "godot": {
+        "command": "node",
+        "args": [
+          "/home/zixi/.claude/mcp-servers/godot-mcp/build/index.js"
+        ],
+        "env": {
+          "GODOT_PATH": "/home/zixi/godot-mcp/godot/Godot_v4.6-rc2_linux.x86_64"
+        }
+      }
+    }
+  }
+  
