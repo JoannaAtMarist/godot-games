@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://boey5waqc80qb"]
+
+[ext_resource type="Script" uid="uid://cw1pul1uwpo3l" path="res://ui/score_hud.gd" id="1_wc6um"]
+[ext_resource type="FontFile" uid="uid://ccjqbqdw22f88" path="res://assets/Ghoulish.ttf" id="2_q4b3u"]
+
+[node name="ScoreHud" type="Control" unique_id=435483549]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wc6um")
+
+[node name="Label" type="Label" parent="." unique_id=266883412]
+layout_mode = 0
+offset_right = 220.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0.78431374, 0.78431374, 0.78431374, 1)
+theme_override_fonts/font = ExtResource("2_q4b3u")
+text = "Score: 0"
