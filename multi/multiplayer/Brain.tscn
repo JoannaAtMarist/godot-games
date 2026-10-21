@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cixixf5mxahik"]
 
-[ext_resource type="Script" uid="uid://16ipffatcbkp" path="res://brain.gd" id="1_m3pcs"]
+[ext_resource type="Script" uid="uid://16ipffatcbkp" path="res://multiplayer/brain.gd" id="1_m3pcs"]
 [ext_resource type="Texture2D" uid="uid://cp5r7y7k5cjc1" path="res://assets/brain.png" id="1_sv4tq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m3pcs"]
