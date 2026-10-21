@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://qi15a0swje2j"]
+
+[ext_resource type="Texture2D" uid="uid://c8mykwgxlwe5l" path="res://assets/ui1.png" id="1_cj4du"]
+[ext_resource type="FontFile" uid="uid://ccjqbqdw22f88" path="res://assets/Ghoulish.ttf" id="2_pq023"]
+[ext_resource type="Texture2D" uid="uid://deq0ia12ns10y" path="res://assets/button2.png" id="3_ps3bc"]
+[ext_resource type="PackedScene" uid="uid://boey5waqc80qb" path="res://ui/ScoreHUD.tscn" id="4_pq023"]
+
+[node name="CanvasLayerHud" type="CanvasLayer" unique_id=1612079709]
+
+[node name="StartMenu" type="Control" parent="." unique_id=51098327]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CenterContainer" type="CenterContainer" parent="StartMenu" unique_id=1362784157]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="StartMenu/CenterContainer" unique_id=1481523865]
+custom_minimum_size = Vector2(138, 120)
+layout_mode = 2
+texture = ExtResource("1_cj4du")
+region_rect = Rect2(0, 0, 90, 80)
+
+[node name="TextureRect" type="TextureRect" parent="StartMenu/CenterContainer" unique_id=1345359611]
+visible = false
+layout_mode = 2
+texture = ExtResource("1_cj4du")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StartMenu/CenterContainer" unique_id=1374612021]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="StartMenu/CenterContainer/VBoxContainer" unique_id=690963816]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78431374, 0.78431374, 0.78431374, 1)
+theme_override_fonts/font = ExtResource("2_pq023")
+theme_override_font_sizes/font_size = 10
+text = "Dog vs Cat
+(Zombies)"
+horizontal_alignment = 1
+
+[node name="HostButton" type="TextureButton" parent="StartMenu/CenterContainer/VBoxContainer" unique_id=430894002]
+layout_mode = 2
+texture_normal = ExtResource("3_ps3bc")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="StartMenu/CenterContainer/VBoxContainer/HostButton" unique_id=1775905125]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.11800001
+anchor_bottom = 0.11800001
+offset_left = 10.0
+offset_top = 0.99399996
+offset_right = 46.0
+offset_bottom = 9.9939995
+theme_override_colors/font_color = Color(0.78431374, 0.78431374, 0.78431374, 1)
+theme_override_fonts/font = ExtResource("2_pq023")
+theme_override_font_sizes/font_size = 6
+text = "Host Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="P2Button" type="TextureButton" parent="StartMenu/CenterContainer/VBoxContainer" unique_id=283154905]
+layout_mode = 2
+texture_normal = ExtResource("3_ps3bc")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="StartMenu/CenterContainer/VBoxContainer/P2Button" unique_id=1178909725]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.11800001
+anchor_bottom = 0.11800001
+offset_left = 1.0
+offset_top = 0.99399996
+offset_right = 56.0
+offset_bottom = 9.9939995
+theme_override_colors/font_color = Color(0.78431374, 0.78431374, 0.78431374, 1)
+theme_override_fonts/font = ExtResource("2_pq023")
+theme_override_font_sizes/font_size = 6
+text = "Join as Player 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreHud" parent="." unique_id=435483549 instance=ExtResource("4_pq023")]
