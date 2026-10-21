@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dcjuqp435c12v"]
+
+[ext_resource type="Texture2D" uid="uid://bpmhkiwtuwv8j" path="res://assets/Rooms/Room9.png" id="1_2r5di"]
+[ext_resource type="SpriteFrames" uid="uid://cghd0k7cmbvyf" path="res://box_cat_frames.tres" id="1_i8kvo"]
+[ext_resource type="Script" path="res://box_cat.gd" id="2_g8mbe"]
+[ext_resource type="Texture2D" uid="uid://carjcl7t0d4mm" path="res://assets/CatPackHalloween/Pumpkin/IdlePumpkingLighton.png" id="2_tprcl"]
+
+[node name="McpHalloweenDemo" type="Node2D" unique_id=109917361]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=231048536]
+texture_filter = 1
+texture = ExtResource("1_2r5di")
+centered = false
+
+[node name="Pumpkin" type="Sprite2D" parent="." unique_id=504664676]
+texture_filter = 1
+position = Vector2(400, 340)
+scale = Vector2(3, 3)
+texture = ExtResource("2_tprcl")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="BoxCat" type="AnimatedSprite2D" parent="." unique_id=1182681680]
+texture_filter = 1
+position = Vector2(256, 300)
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("1_i8kvo")
+animation = &"box"
+script = ExtResource("2_g8mbe")

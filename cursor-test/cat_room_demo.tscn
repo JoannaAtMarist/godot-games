@@ -2,8 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://cdsr6iysn3vdn" path="res://assets/Rooms/Room1.png" id="1_xui5r"]
 [ext_resource type="Texture2D" uid="uid://3gejtlu5a5sn" path="res://assets/Catroompaid.png" id="2_wv6fm"]
-[ext_resource type="Script" uid="uid://cr12ky5s0g1cc" path="res://cat.gd" id="3_wv6fm"]
-[ext_resource type="SpriteFrames" path="res://cat_walk.tres" id="4_rt7hs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xui5r"]
 atlas = ExtResource("2_wv6fm")
@@ -80,9 +78,6 @@ region = Rect2(454, 623, 52, 33)
 [sub_resource type="AtlasTexture" id="AtlasTexture_d2et0"]
 atlas = ExtResource("2_wv6fm")
 region = Rect2(203, 879, 43, 34)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rt7hs"]
-size = Vector2(20, 14)
 
 [node name="CatRoom" type="Node2D" unique_id=419358576]
 
@@ -204,18 +199,3 @@ texture_filter = 1
 position = Vector2(418, 338)
 texture = SubResource("AtlasTexture_d2et0")
 centered = false
-
-[node name="Cat" type="CharacterBody2D" parent="." unique_id=1119023772]
-z_index = 10
-position = Vector2(195, 368)
-script = ExtResource("3_wv6fm")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Cat" unique_id=566616138]
-texture_filter = 1
-sprite_frames = ExtResource("4_rt7hs")
-animation = &"walk"
-autoplay = "walk"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cat" unique_id=104567213]
-position = Vector2(0, 6)
-shape = SubResource("RectangleShape2D_rt7hs")
